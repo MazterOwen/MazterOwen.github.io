@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de equipo de computo Tecnológico de Pinotepa</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #1e1e2f, #27293d);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Estilo del título */
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        /* Animación de carga */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo de la tabla */
+        table {
+            width: 100%;
+            max-width: 90%;
+            border-collapse: collapse;
+            background: linear-gradient(135deg, #0f0f1c, #2a2a40);
+            animation: fadeIn 1.5s ease-out;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+            word-wrap: break-word;
+        }
+
+        th {
+            background: linear-gradient(90deg, #00d4ff, #2bff00);
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Hover para las filas */
+        tr:hover {
+            background: linear-gradient(90deg, #7f00ff, #e100ff);
+            box-shadow: 0 5px 15px rgba(127, 0, 255, 0.7);
+        }
+
+        /* Animación al aparecer */
+        tr {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Hacer la tabla responsiva */
+        @media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border-bottom: 1px solid #444;
+            }
+
+            td {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 15px;
+                font-size: 0.85em;
+            }
+
+            td::before {
+                content: attr(data-label);
+                flex: 0 0 50%;
+                font-weight: bold;
+                color: #00d4ff;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Control de equipo de computo tecnológico de Pinotepa</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>No. de equipo</th>
+                <th>Marca</th>
+                <th>Tipo</th>
+                <th>Memoria RAM</th>
+                <th>Procesador</th>
+                <th>Sistema Operativo</th>
+                <th>Versión</th>
+                <th>Tipo de Sistema</th>
+                <th>Propiedad</th>
+                <th>Área</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Equipo de computo 1</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo">All in one</td>
+                <td data-label="Memoria RAM">8GB</td>
+                <td data-label="Procesador">AMD Ryzen 3 4300U</td>
+                <td data-label="Sistema Operativo">Windows 11 Pro</td>
+                <td data-label="Versión">23H2</td>
+                <td data-label="Tipo de Sistema">S.O. 64 bits, x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Impresora 1</td>
+                <td data-label="Marca">Samsung</td>
+                <td data-label="Tipo">Impresora</td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">ProXpress Sl-m2020w</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Equipo de computo 2</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">8GB</td>
+                <td data-label="Procesador">Intel Pentium Gold G5400</td>
+                <td data-label="Sistema Operativo">Windows 7 Ultimate</td>
+                <td data-label="Versión">6.1.76.01 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Equipo de computo 3</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo">All in one</td>
+                <td data-label="Memoria RAM">8GB</td>
+                <td data-label="Procesador">AMD Ryzen 5300U</td>
+                <td data-label="Sistema Operativo">Windows 11 home</td>
+                <td data-label="Versión">23H2</td>
+                <td data-label="Tipo de Sistema">S. O. 64 bits, x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Impresora 2</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo"></td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">Laser Jet M111w</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Equipo de computo 4</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo">All in one</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel Core i5-2400</td>
+                <td data-label="Sistema Operativo">Windows 10 pro</td>
+                <td data-label="Versión">22H2</td>
+                <td data-label="Tipo de Sistema">S.O. 32 bits, x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Financieros Impresora 3</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo">Impresora </td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">Laser Jet Pro M402n</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Financieros</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Ciencias E. A. Equipo de computo 1</td>
+                <td data-label="Marca">Lenovo</td>
+                <td data-label="Tipo">All in one</td>
+                <td data-label="Memoria RAM">8 GB</td>
+                <td data-label="Procesador">AMD Ryzen 3 3250U</td>
+                <td data-label="Sistema Operativo">Windows 11 home</td>
+                <td data-label="Versión">23H2</td>
+                <td data-label="Tipo de Sistema">S.O. 64 bits,x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Ciencias Economicas Administrativas</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Ciencias E. A. Impresora 1</td>
+                <td data-label="Marca">EPSON</td>
+                <td data-label="Tipo">Impresora</td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">L3251</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Ciencias Economicas Administrativas</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Humanos Equipo de computo 1</td>
+                <td data-label="Marca">Lenovo</td>
+                <td data-label="Tipo">All in one</td>
+                <td data-label="Memoria RAM">16 GB</td>
+                <td data-label="Procesador">Intel Core i5-9400T</td>
+                <td data-label="Sistema Operativo">Windows 11 home</td>
+                <td data-label="Versión">23H2</td>
+                <td data-label="Tipo de Sistema">S.O. 64 bits, x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Humanos</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Recursos Humanos Impresora 1</td>
+                <td data-label="Marca">EPSON</td>
+                <td data-label="Tipo">Impresora</td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">L5190</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Recursos Humanos</td>
+            </tr>
+
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 1</td>
+                <td data-label="Marca">LANIX</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 2</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 3</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 4</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 5</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 6</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel R Core(TM) i3 CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 7</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel R Core(TM) i3 CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 8</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel R Core(TM) i3 CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 9</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel R Core(TM) i3 CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 10</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 11</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel R Core(TM) i3 CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 12</td>
+                <td data-label="Marca">LANIX</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 13</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">4 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Linux Mind</td>
+                <td data-label="Versión">21.1</td>
+                <td data-label="Tipo de Sistema">S. O. 64 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 14</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">4 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 15</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">4 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 16</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Sala C Equipo de computo 17</td>
+                <td data-label="Marca">Acer</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">2 GB</td>
+                <td data-label="Procesador">Intel Core(TM) 2 duo CPU</td>
+                <td data-label="Sistema Operativo">Windows 7 profesional</td>
+                <td data-label="Versión">6.1.7601 Service Pack 1</td>
+                <td data-label="Tipo de Sistema">S. O. 32 bits, x86</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Sala C</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Ciencias Basicas Equipo de computo 1</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo">Escritorio</td>
+                <td data-label="Memoria RAM">3 GB</td>
+                <td data-label="Procesador">Intel Core i5 2400</td>
+                <td data-label="Sistema Operativo">Windows 10 pro</td>
+                <td data-label="Versión">22H2</td>
+                <td data-label="Tipo de Sistema">S. O. 64 bits, x64</td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Ciencias Basicas</td>
+            </tr>
+            <tr>
+                <td data-label="No. de equipo">Ciencias Basicas Impresora 1</td>
+                <td data-label="Marca">HP</td>
+                <td data-label="Tipo"></td>
+                <td data-label="Memoria RAM"></td>
+                <td data-label="Procesador"></td>
+                <td data-label="Sistema Operativo"></td>
+                <td data-label="Versión">Laser Jet M111w</td>
+                <td data-label="Tipo de Sistema"></td>
+                <td data-label="Propiedad">Institución</td>
+                <td data-label="Área">Ciencias Basicas</td>
+            </tr>
+            
+            <!-- Añadir más filas según sea necesario -->
+        </tbody>
+    </table>
+</body>
+</html>
